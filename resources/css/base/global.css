@@ -1,0 +1,11 @@
+/*
+ * Contient les variables CSS globales (custom properties) et les styles
+ * de base appliqués à l'ensemble du site (ex: body, html).
+ */
+:root {
+  --jssed-dark: #0b1727;
+  --jssed-card: #ffffff;
+}
+.dark {
+  --jssed-card: #111827;
+}

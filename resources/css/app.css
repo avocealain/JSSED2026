@@ -1,0 +1,30 @@
+/* 1. IMPORTS DES STYLES */
+@import './base/global.css';
+@import './base/animations.css';
+@import './components/buttons.css';
+@import './components/badges.css';
+
+html {
+    scroll-behavior: smooth;
+}
+/* Animation de la barre d'actualités (News Ticker) */
+@keyframes ticker {
+    0% { transform: translateX(100vw); }
+    100% { transform: translateX(-100%); }
+}
+
+.animate-ticker {
+    display: inline-block;
+    white-space: nowrap;
+    animation: ticker 65s linear infinite;
+    will-change: transform;
+}
+
+/* Pause de defilement quand on survole avec la souris*/
+.animate-ticker:hover {
+    animation-play-state: paused;
+}
+/* 2. TAILWIND */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
