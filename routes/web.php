@@ -90,18 +90,10 @@ Route::middleware(['auth', 'verified', 'admin'])->prefix('admin')->name('admin.'
 
 require __DIR__.'/auth.php';
 
-// DÉPLOİEMENT DE LA BASE DE DONNÉES (protégée par le middleware admin)
-Route::middleware(['auth', 'verified', 'admin'])->get('/setup-db-secrete-jssed-2026', function() {
-    // 1. Force l'exécution des migrations (création des tables)
-    Artisan::call('migrate:fresh', ['--force' => true]);
-
-    // 2. Force l'exécution des seeders (création de l'admin)
-    Artisan::call('db:seed', ['--force' => true]);
-
-    return '🚀 Base de données migrée et Seeder exécuté avec succès !';
-});
-
-Route::get('/nettoyer-cache-jssed-2026', function() {
-    Artisan::call('optimize:clear');
-    return '🧹 Cache vidé, configurations rechargées et liens Ziggy mis à jour avec succès !';
+Route::get('/create-admin-temporaire', function () {
+    \Illuminate\Support\Facades\Artisan::call('db:seed', [
+        '--class' => 'AdminSeeder',
+        '--force' => true,
+    ]);
+    return 'Admin créé avec succès !';
 });
