@@ -23,5 +23,11 @@ RUN php artisan storage:link
 # Permissions pour Laravel
 RUN chown -R application:application /app/storage /app/bootstrap/cache
 
+
+# 15. Script de démarrage : migrations puis Apache
+CMD php artisan optimize:clear && \
+    php artisan migrate --force && \
+    apache2-foreground
+
 ENV WEB_DOCUMENT_ROOT=/app/public
 EXPOSE 80
