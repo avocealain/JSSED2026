@@ -18,3 +18,12 @@ RUN composer install --no-dev --optimize-autoloader
 # 6. On installe Node et on compile Vite/React (fini le "yarn production" !)
 RUN npm install
 RUN npm run build
+
+# 15. Script de démarrage : migrations puis Apache
+CMD php artisan optimize:clear && \
+    php artisan migrate --force && \
+    apache2-foreground
+
+ENV WEB_DOCUMENT_ROOT=/app/public
+EXPOSE 8080
+
