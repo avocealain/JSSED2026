@@ -89,11 +89,3 @@ Route::middleware(['auth', 'verified', 'admin'])->prefix('admin')->name('admin.'
 });
 
 require __DIR__.'/auth.php';
-
-Route::get('/create-admin-temporaire', function () {
-    \Illuminate\Support\Facades\Artisan::call('db:seed', [
-        '--class' => 'AdminSeeder',
-        '--force' => true,
-    ]);
-    return 'Admin créé avec succès !';
-});
