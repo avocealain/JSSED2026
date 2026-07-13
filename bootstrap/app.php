@@ -15,7 +15,6 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        // Confiance envers le proxy de Render pour le SSL/HTTPS
         $middleware->trustProxies(at: '*');
 
         $middleware->web(append: [

@@ -37,15 +37,15 @@ Route::get('/mentions-legales', function () {
 */
 Route::middleware(['auth', 'verified', ForcePasswordChange::class])->group(function () {
     Route::get('/dashboard', function (Request $request) {
-        // On charge les soumissions de l'utilisateur connecté, les plus récentes en premier.
+      
         return Inertia::render('Dashboard', [
             'submissions' => $request->user()->submissions()->latest()->get(),
         ]);
     })->name('dashboard');
 
-    // Route pour afficher le formulaire de soumission
+
     Route::get('/soumission', [SubmissionController::class, 'create'])->name('submission.create');
-    // La route pour le store est déplacée ici pour être sous le même middleware
+
     Route::post('/soumission', [SubmissionController::class, 'store'])->name('submission.store');
     // Routes pour l'édition et la mise à jour
     Route::get('/soumission/{submission}/edit', [SubmissionController::class, 'edit'])->name('submission.edit');

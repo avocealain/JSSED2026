@@ -6,7 +6,7 @@ USER root
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y nodejs
 
-# 3. On copie tout ton code source dans le serveur
+# 3. On copie les fichiers de l'application dans le conteneur et on change le propriétaire pour www-data
 COPY --chown=www-data:www-data . /var/www/html
 
 # 4. On revient sur l'utilisateur sécurisé
@@ -15,11 +15,11 @@ USER www-data
 # 5. On installe les paquets PHP de production
 RUN composer install --no-dev --optimize-autoloader
 
-# 6. On installe Node et on compile Vite/React (fini le "yarn production" !)
+# 6. On installe Node et on compile Vite/React
 RUN npm install
 RUN npm run build
 
-# 15. Script de démarrage : migrations puis Apache
+
 #CMD php artisan optimize:clear && \
 #    php artisan migrate --force && \
 #    apache2-foreground
