@@ -6,6 +6,9 @@
         "build": "vite build",
         "dev": "vite"
     },
+    "engines": {
+    "node": ">=20.0.0"
+},
     "devDependencies": {
         "@headlessui/react": "^2.0.0",
         "@inertiajs/react": "^2.0.0",
