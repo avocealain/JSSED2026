@@ -29,9 +29,8 @@ const RegistrationSuccess = ({ regData }) => {
                 <h2 className="mt-6 text-2xl font-bold text-gray-900 dark:text-white">
                     Pré-inscription enregistrée avec succès !
                 </h2>
-                
                 <p className="mt-3 text-gray-600 dark:text-gray-400 max-w-lg mx-auto">
-                    Un email contenant les instructions de paiement via le Trésor Public vous a été envoyé. Veuillez le consulter pour finaliser votre inscription. Si vous ne le trouvez pas, vérifiez votre dossier de spam ou contactez l'<strong>Administration</strong> via le formulaire de contact pour assistance.
+                   <span className="font-bold text-orange-500">ATTENTION</span> : Un email contenant les instructions de paiement via le Trésor Public vous a été envoyé. Veuillez le consulter pour finaliser votre inscription. Si vous ne le trouvez pas, vérifiez votre dossier de <span className="font-bold">spam</span> ou contactez l'<strong href="mailto:jssed.enspd.up.2026@gmail.com">Administration</strong> pour assistance.
                 </p>
 
                 {/* Ticket Récapitulatif */}
