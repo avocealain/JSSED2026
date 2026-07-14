@@ -16,4 +16,7 @@ Vous pouvez consulter et évaluer cette soumission depuis le tableau de bord d'a
 Voir la soumission
 @endcomponent
 
+Cordialement,<br>
+Le comité d'organisation des JSSED 2026
+
 </x-mail::message>

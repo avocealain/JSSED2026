@@ -43,7 +43,7 @@ class AccountStatusNotification extends Mailable implements ShouldQueue
 
     public function content(): Content
     {
-        // Cette vue unique affichera un contenu différent selon le statut
+        // affichage d'un contenu différent selon le statut
         return new Content(markdown: 'emails.auth.account-status');
     }
 }

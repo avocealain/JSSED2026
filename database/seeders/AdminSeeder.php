@@ -11,7 +11,21 @@ class AdminSeeder extends Seeder
         User::updateOrCreate(
             ['email' => 'alain.enspd@gmail.com'],
             [
-                'prenom'            => 'Admin',
+                'prenom'            => 'AL Admin',
+                'nom'               => 'JSSED',
+                'password'          => 'Admin@2026!',
+                'role'              => 'admin',
+                'type'              => 'admin',
+                'password_status'   => 'valid',
+                'email_verified_at' => now(),
+                'institution'       => 'ENSPD',
+                'pays'              => 'Bénin',
+            ]
+        );
+        User::updateOrCreate(
+            ['email' => 'rodriguedjossou93@gmail.com'],
+            [
+                'prenom'            => 'RO Admin',
                 'nom'               => 'JSSED',
                 'password'          => 'Admin@2026!',
                 'role'              => 'admin',
@@ -26,7 +40,7 @@ class AdminSeeder extends Seeder
         User::updateOrCreate(
             ['email' => 'jssed.enspd.up.2026@gmail.com'],
             [
-                'prenom'            => 'Admin',
+                'prenom'            => 'JS Admin',
                 'nom'               => 'JSSED',
                 'password'          => 'Admin@2026!',
                 'role'              => 'admin',

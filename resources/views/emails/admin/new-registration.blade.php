@@ -1,4 +1,3 @@
-{{-- Fichier : resources/views/emails/admin/new_registration.blade.php --}}
 <x-mail::message>
 # Nouvelle inscription en attente
 
@@ -17,5 +16,5 @@ Voir le tableau de bord
 </x-mail::button>
 
 Cordialement,<br>
-Le système de notification JSSED
+Le comité d'organisation des JSSED 2026
 </x-mail::message>
