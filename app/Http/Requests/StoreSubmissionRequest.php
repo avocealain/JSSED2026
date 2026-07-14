@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Requests;
 
 use Illuminate\Contracts\Validation\ValidationRule;
@@ -33,12 +32,8 @@ class StoreSubmissionRequest extends FormRequest
                     $fail('Le résumé ne doit pas dépasser 300 mots.');
                 }
             }],
-            'keywords' => ['required', 'string', 'max:255', function ($attribute, $value, $fail) {
-                $count = count(array_filter(array_map('trim', explode(',', $value))));
-                if ($count < 3 || $count > 5) {
-                    $fail('Veuillez fournir entre 3 et 5 mots-clés.');
-                }
-            }],
+            
+            'keywords' => ['required', 'string', 'max:255'],
             'financement' => ['nullable', 'string', 'max:255'],
             'coauthors' => ['nullable', 'array'],
             'coauthors.*.prenom' => ['required_with:coauthors.*.nom', 'string', 'max:100'],

@@ -59,14 +59,14 @@ export default function FaqSection({ faqs = [] }) {
     }
 
     return (
-        <section id="faq" className="py-20 bg-white dark:bg-gray-900">
+        <section id="faq" className="py-12 md:py-20 bg-white dark:bg-gray-900">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* En-tête de la section */}
-                <div className="text-center max-w-3xl mx-auto mb-12">
+                <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
                     <div className="inline-block mb-4 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-500/10 text-blue-800 dark:text-blue-400 font-semibold tracking-wider uppercase text-xs">
                         Questions fréquentes
                     </div>
-                    <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
                         FAQ
                     </h2>
                 </div>
