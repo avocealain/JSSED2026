@@ -89,3 +89,17 @@ Route::middleware(['auth', 'verified', 'admin'])->prefix('admin')->name('admin.'
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/installation-secrete-db', function () {
+    try {
+        // 1. Exécuter les migrations en toute sécurité (sans effacer les données existantes)
+        \Illuminate\Support\Facades\Artisan::call('migrate', ['--force' => true]);
+        
+        // 2. Exécuter les seeders
+        \Illuminate\Support\Facades\Artisan::call('db:seed', ['--force' => true]);
+        
+        return '🚀 Succès : Migrations et Seeders exécutés ! (Pense à supprimer cette route immédiatement)';
+    } catch (\Exception $e) {
+        return '❌ Erreur : ' . $e->getMessage();
+    }
+});

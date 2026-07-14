@@ -17,7 +17,7 @@
     {{-- Footer --}}
     <x-slot:footer>
         <x-mail::footer>
-            © {{ date('Y') }} {{ config('app.name', 'JSSED') }}. Tous droits réservés.
+            © {{ date('Y') }} {{ config('app.name', 'JSSED 2026') }}. Tous droits réservés.
         </x-mail::footer>
     </x-slot:footer>
 </x-mail::layout>
