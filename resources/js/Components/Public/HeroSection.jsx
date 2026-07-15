@@ -65,7 +65,7 @@ export default function HeroSection() {
                         </h1>
 
                         <p className="mt-5 text-xl sm:text-2xl font-medium text-gray-700 dark:text-gray-300 tracking-widest transition-colors duration-300">
-                            J · S · S · E · D  2026
+                            J · S · S · E · D
                         </p>
 
                         <div className="mt-8 flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-gray-600 dark:text-gray-400 transition-colors duration-300">
