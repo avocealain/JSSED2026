@@ -39,7 +39,7 @@ export default function AboutSection() {
                             Les JSSED 2026
                         </h2>
                         <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-                            Les Journées Scientifiques de la Statistique, de l'Évaluation et de la Démographie réunissent chercheurs, praticiens et décideurs pour échanger sur les défis du continent. Une organisation de l'ENSPD en collaboration avec l'EDSAE — Université de Parakou.
+                            Les Journées Scientifiques de la Statistique, de l'Évaluation et de la Démographie réunissent chercheurs, praticiens et décideurs pour échanger sur les défis du continent. Une organisation de l'ENSPD en collaboration avec l'EDSAE de l'Université de Parakou.
                         </p>
                     </div>
 
@@ -71,7 +71,7 @@ export default function AboutSection() {
                             Professeur Mouftaou AMADOU SANNI
                         </h3>
                         <p className="text-gray-600 dark:text-gray-300">
-                            Cette deuxième édition des JSSED est dédiée au Professeur Mouftaou AMADOU SANNI, figure emblématique de la démographie africaine, qui prendra sa retraite en octobre 2025. Son immense contribution à la formation et à la recherche a marqué des générations de statisticiens et démographes sur le continent.
+                            Cette deuxième édition rend hommage au premier Directeur de l'ENSPD, admis à la retraite en octobre 2025, pour sa contribution exceptionnelle à la démographie africaine et à la formation de plusieurs générations de statisticiens, planificateurs et démographes. Une session plénière d'hommage ouvrira les journées.
                         </p>
                     </div>
 
