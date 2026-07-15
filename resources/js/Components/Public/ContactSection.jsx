@@ -142,14 +142,14 @@ export default function ContactSection() {
                             {/* Boutons d'action (Droite) */}
                             <div className="flex items-center gap-1.5 shrink-0 mt-1">
                                 {/* Bouton Agrandir le plan */}
-                                <a href="https://maps.google.com/?q=Université+de+Parakou" target="_blank" rel="noreferrer" className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors" title="Agrandir le plan">
+                                <a href="https://maps.app.goo.gl/YCKGQJhZ1kMFwBAP9" target="_blank" rel="noreferrer" className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors" title="Agrandir le plan">
                                     <svg className="w-[22px] h-[22px] text-[#1a73e8] dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                     </svg>
                                 </a>
                                 
                                 {/* Bouton Itinéraire (Losange Google) */}
-                                <a href="https://maps.google.com/maps?daddr=Université+de+Parakou" target="_blank" rel="noreferrer" className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors" title="Itinéraire">
+                                <a href="https://maps.app.goo.gl/YCKGQJhZ1kMFwBAP9?daddr=Université+de+Parakou" target="_blank" rel="noreferrer" className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors" title="Itinéraire">
                                     <svg className="w-6 h-6 text-[#1a73e8] dark:text-blue-400" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M21.71 11.29l-9-9a.996.996 0 00-1.41 0l-9 9a.996.996 0 000 1.41l9 9c.39.39 1.02.39 1.41 0l9-9a.996.996 0 000-1.41zM14 14.5V12h-4v3H8v-4c0-.55.45-1 1-1h5V7.5l3.5 3.5-3.5 3.5z" />
                                     </svg>
