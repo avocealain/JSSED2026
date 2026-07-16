@@ -100,7 +100,7 @@ export default function HeroSection() {
                             <a href="login" className="w-full sm:w-auto inline-block px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg shadow-md transition-colors duration-300">
                                 Connexion / Soumettre
                             </a>
-                            <a href="#" className="w-full sm:w-auto inline-block px-8 py-3 border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white dark:border-emerald-500 dark:text-emerald-400 dark:hover:bg-emerald-500 dark:hover:text-white font-semibold rounded-lg transition-colors duration-300">
+                            <a href="/documents/Appel_a_communications_JSSED_ENSPD_EDSAE_UP_2026_v15052026.pdf" download="Guide_Appel_Communications_2026.pdf" title="Télécharger la version officielle de l'appel à candidature" className="w-full sm:w-auto inline-block px-8 py-3 border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white dark:border-emerald-500 dark:text-emerald-400 dark:hover:bg-emerald-500 dark:hover:text-white font-semibold rounded-lg transition-colors duration-300">
                                 Appel à communications
                             </a>
                             <a href="#telechargements" className="w-full sm:w-auto inline-block px-8 py-3 border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white dark:border-emerald-500 dark:text-emerald-400 dark:hover:bg-emerald-500 dark:hover:text-white font-semibold rounded-lg transition-colors duration-300">
