@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from '@inertiajs/react';
 
-// Données par défaut, fidèles à jssed.html
 const fallbackSpeakers = [
     { id: 'fb-s1', nom: 'Hommage', role: 'Session Plénière', description: 'Pr. Mouftaou AMADOU SANNI — premier Directeur de l\'ENSPD' },
     { id: 'fb-s2', nom: 'Conférence Inaugurale', role: 'Keynote', description: 'Intervenant invité — à confirmer' },
@@ -67,7 +66,7 @@ export default function ProgrammeSection({ speakers = [], programSessions = {} }
         return `Jour ${dayNumber} · ${formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1)}`;
     };
 
-    // Utilise les données de la base de données si elles existent, sinon les données par défaut.
+    // On Utilise les données de la base de données si elles existent, sinon les données par défaut.
     const displaySpeakers = speakers && speakers.length > 0 ? speakers : fallbackSpeakers;
     const displayProgram = programSessions && Object.keys(programSessions).length > 0 ? programSessions : fallbackProgram;
 
@@ -107,7 +106,7 @@ export default function ProgrammeSection({ speakers = [], programSessions = {} }
                                     {formatDay(date, index)}
                                 </h4>
                                 <div className="divide-y divide-gray-200 dark:divide-gray-700/50">
-                                    {/* On affiche seulement les 4 premières sessions pour l'aperçu */}
+                                    {/* Affichage des 4 premières sessions pour l'aperçu */}
                                     {daySessions.slice(0, 4).map((session) => (
                                         <SessionItem
                                             key={session.id}
