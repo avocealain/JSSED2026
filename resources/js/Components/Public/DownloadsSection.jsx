@@ -21,8 +21,8 @@ export default function DownloadsSection() {
             id: 3,
             title: 'Guide de participation',
             description: 'Informations détaillées (PDF)',
-            fileUrl: '/documents/guide-participation.pdf', // User-guide
-            isReady: true
+            fileUrl: '', // User-guide
+            isReady: false
         },
         {
             id: 4,
@@ -32,6 +32,23 @@ export default function DownloadsSection() {
             isReady: false
         }
     ];
+
+    // Gestion du téléchargement masqué et direct
+    const handleDownload = (e, doc) => {
+        e.preventDefault();
+        if (!doc.isReady) return;
+
+        const link = document.createElement('a');
+        link.href = doc.fileUrl;
+        
+        // Extraction du nom original du fichier à partir de l'URL pour le téléchargement
+        const fileName = doc.fileUrl.split('/').pop();
+        link.download = fileName;
+        
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
 
     return (
         <section id="telechargements" className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
@@ -52,10 +69,10 @@ export default function DownloadsSection() {
                     {documents.map((doc) => (
                         <a
                             key={doc.id}
-                            href={doc.isReady ? doc.fileUrl : '#'}
-                            target={doc.isReady ? "_blank" : "_self"}
-                            rel="noreferrer"
-                            className={`flex items-center p-5 rounded-2xl border ${doc.isReady ? 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:shadow-md hover:border-emerald-300 dark:hover:border-emerald-600' : 'border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50 cursor-default'} transition-all duration-300`}
+                            href="#"
+                            onClick={(e) => handleDownload(e, doc)}
+                            title={doc.isReady ? `Télécharger : ${doc.title}` : "Disponible prochainement"}
+                            className={`flex items-center p-5 rounded-2xl border ${doc.isReady ? 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:shadow-md hover:border-emerald-300 dark:hover:border-emerald-600 cursor-pointer' : 'border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50 cursor-default'} transition-all duration-300`}
                         >
                             {/* Icône Fichier */}
                             <div className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center mr-4 ${doc.isReady ? 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400' : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500'}`}>
