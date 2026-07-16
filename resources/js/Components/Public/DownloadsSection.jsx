@@ -7,7 +7,7 @@ export default function DownloadsSection() {
             id: 1,
             title: 'Appel à communications',
             description: 'Document officiel de l\'appel (PDF)',
-            fileUrl: '', // Laisse vide pour afficher "BIENTÔT"
+            fileUrl: '', // "BIENTÔT"
             isReady: false
         },
         {
@@ -21,7 +21,7 @@ export default function DownloadsSection() {
             id: 3,
             title: 'Guide de participation',
             description: 'Informations détaillées (PDF)',
-            fileUrl: '/documents/guide-participation.pdf', // Lien réel
+            fileUrl: '/documents/guide-participation.pdf', // User-guide
             isReady: true
         },
         {
