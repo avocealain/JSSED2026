@@ -3,9 +3,9 @@ import { Link } from '@inertiajs/react';
 
 // Données par défaut, fidèles à jssed.html
 const fallbackSpeakers = [
-    { id: 'fb-s1', nom: 'Hommage', role: 'Session plénière', description: 'Pr. Mouftaou AMADOU SANNI — premier Directeur de l\'ENSPD' },
-    { id: 'fb-s2', nom: 'Conférence inaugurale', role: 'Keynote', description: 'Intervenant invité — à confirmer' },
-    { id: 'fb-s3', nom: 'Conférence finale', role: 'Keynote', description: 'Intervenant invité — à confirmer' }
+    { id: 'fb-s1', nom: 'Hommage', role: 'Session Plénière', description: 'Pr. Mouftaou AMADOU SANNI — premier Directeur de l\'ENSPD' },
+    { id: 'fb-s2', nom: 'Conférence Inaugurale', role: 'Keynote', description: 'Intervenant invité — à confirmer' },
+    { id: 'fb-s3', nom: 'Conférence de Clôture', role: 'Keynote', description: 'Intervenant invité — à confirmer' }
 ];
 
 const fallbackProgram = {
@@ -23,7 +23,7 @@ const fallbackProgram = {
     ],
     '2026-09-18': [
         { id: 'fb-p7', heure_debut: '09:00', heure_fin: '11:00', type: 'Exposition', titre: 'Expositions & démonstrations d\'outils', description: '' },
-        { id: 'fb-p8', heure_debut: '11:30', heure_fin: '13:00', type: 'Plénière', titre: 'Conférence finale & cérémonie de clôture', description: 'Capitalisation des acquis' }
+        { id: 'fb-p8', heure_debut: '11:30', heure_fin: '13:00', type: 'Plénière', titre: 'Conférence & cérémonie de clôture', description: 'Capitalisation des acquis' }
     ],
 };
 
