@@ -51,5 +51,20 @@ class AdminSeeder extends Seeder
                 'pays'              => 'Bénin',
             ]
         );
+
+        User::updateOrCreate(
+            ['email' => 'djustino87@gmail.com'],
+            [
+                'prenom'            => 'DJ Admin',
+                'nom'               => 'JSSED',
+                'password'          => 'Admin@2026!',
+                'role'              => 'admin',
+                'type'              => 'admin',
+                'password_status'   => 'valid',
+                'email_verified_at' => now(),
+                'institution'       => 'ENSPD',
+                'pays'              => 'Bénin',
+            ]
+        );
     }
 }
